@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Flock (bin)
+Comment=Flock Web Browser
+Exec=/opt/bin/flock %U
+Icon=flock-bin-icon.png
+Terminal=false
+Type=Application
+Categories=Application;Network;

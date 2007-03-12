@@ -1,0 +1,7 @@
+# Serkan Kaba <serkan_kaba@yahoo.com> (22 Nov 2006)
+# Masked for testing
+=app-text/enchant-1.2.6
+
+# Serkan Kaba <serkan_kaba@yahoo.com> (11 Mar 2007)
+# Masked for testing
+app-misc/pardusman-svn

@@ -1,0 +1,8 @@
+DIST lapis-splash-screen-version-0.1.tar.bz2 623111 RMD160 9530f476155a619573ae86552d620a507b14259e SHA1 fbee6aadf7e73ad9ca51a6e90d8e9f7732c33105 SHA256 a5e46291381c185377aae22e3bb7ee719082bd039fbd294313e497ab066823aa
+EBUILD splash-themes-lapis-0.1.ebuild 458 RMD160 963023f7f52a7379ebb6c2c04ea18db5ab9603b0 SHA1 c3a75fc571877a29d4cb9469932200f5cba3756f SHA256 dff61c6b77d678ddf3354d7b2c3a53533c00aa54ce693409e244bfcbaf82aa06
+MD5 56f0b2efb6b5d3188b779a7a1f0bdd6c splash-themes-lapis-0.1.ebuild 458
+RMD160 963023f7f52a7379ebb6c2c04ea18db5ab9603b0 splash-themes-lapis-0.1.ebuild 458
+SHA256 dff61c6b77d678ddf3354d7b2c3a53533c00aa54ce693409e244bfcbaf82aa06 splash-themes-lapis-0.1.ebuild 458
+MD5 2beaa5348e7d211f710fd1c85dfdf721 files/digest-splash-themes-lapis-0.1 298
+RMD160 ce10843cca5fec4ab4986707633d4c1d82a9645b files/digest-splash-themes-lapis-0.1 298
+SHA256 31b1fb9ec21a739c2224cb92f2690793a7dca8f45c25695c656647df6df9676d files/digest-splash-themes-lapis-0.1 298

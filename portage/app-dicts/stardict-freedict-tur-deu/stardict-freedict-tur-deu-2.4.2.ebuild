@@ -1,0 +1,15 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+FROM_LANG="Turkish"
+TO_LANG="German"
+DICT_PREFIX="dictd_www.freedict.de_"
+
+inherit stardict
+
+HOMEPAGE="http://www.stardict.org/downloadit.php"
+KEYWORDS="x86 ~amd64 ppc sparc"
+IUSE=""
+
+RDEPEND=">=app-dicts/stardict-2.4.2"

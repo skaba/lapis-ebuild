@@ -1,0 +1,8 @@
+DIST itouch-control-0.1.1.tar.gz 323774 RMD160 b204db515b8dffdf5020fb73122bdd49b874479e SHA1 7efce5e3aa3008e6265ea1b667e67d8ee6ef3ff1 SHA256 2e8b6a010329ff292a336b86ae7d69bf2bfa9139629c5cf74a3cee46818d0975
+EBUILD itouch-control-0.1.1.ebuild 554 RMD160 c07758ff99bba934a46760300aadb10ec248261c SHA1 450806fe60b490c52c2cb0626067acfe846a1cdb SHA256 e35150e93da79ce4c264bb862a8fca2307f62f35205b8e2727a175927219ff85
+MD5 4529fe9128fba4f100cfbf0b6b2ff4b8 itouch-control-0.1.1.ebuild 554
+RMD160 c07758ff99bba934a46760300aadb10ec248261c itouch-control-0.1.1.ebuild 554
+SHA256 e35150e93da79ce4c264bb862a8fca2307f62f35205b8e2727a175927219ff85 itouch-control-0.1.1.ebuild 554
+MD5 6ea10dc112aaaca202c07049382786f7 files/digest-itouch-control-0.1.1 262
+RMD160 1d2efc32dc427cb58b2af0219d68c6a6663afd0b files/digest-itouch-control-0.1.1 262
+SHA256 b6a05e3959b2b6acbe094fd8159c36fd9694bb5fc8ff406bc8e8db13c6084aff files/digest-itouch-control-0.1.1 262

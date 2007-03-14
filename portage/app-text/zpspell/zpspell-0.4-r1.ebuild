@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-util/cmake"
-RDEPEND="|| ( app-text/zemberek-server >app-text/zemberek-server-0.6 )"
+RDEPEND=">app-text/zemberek-server-0.6"
 
 src_compile() {
 	cmake \

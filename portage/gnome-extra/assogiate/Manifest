@@ -1,0 +1,8 @@
+DIST assogiate-0.1.1.tar.bz2 299585 RMD160 dfc7833257ca4ad11ed9c37e7f04c00dbcb9f541 SHA1 a09fa3a2935ed8fe1040ee81f21c27f1ee1eb0bf SHA256 0ee4cfd5dc45309f973a8cbe794368dc06635ab5a4a5e283271ebd2722c8c140
+EBUILD assogiate-0.1.1.ebuild 882 RMD160 3a20c7c1860331cea24e6c6b1ab5c5f0febd34be SHA1 e1cfb95ae89ac71cdf14c06a22164bf4aae0de28 SHA256 5dfed22f7991b9872bad3c036476397868bf55bea49e01d7ea07b199c9fd2ca8
+MD5 0df3d7d9eadcd2e502adc6e51ae5ea3d assogiate-0.1.1.ebuild 882
+RMD160 3a20c7c1860331cea24e6c6b1ab5c5f0febd34be assogiate-0.1.1.ebuild 882
+SHA256 5dfed22f7991b9872bad3c036476397868bf55bea49e01d7ea07b199c9fd2ca8 assogiate-0.1.1.ebuild 882
+MD5 a595c61d8a30c107f5a5cec3e582e6d9 files/digest-assogiate-0.1.1 250
+RMD160 3ef63cf46922e7ead2534d09343966bad9c01515 files/digest-assogiate-0.1.1 250
+SHA256 c81374dd8a7810665552fa4c150f6d0cdc91bf6c1a972919522a3aa0a7336d5d files/digest-assogiate-0.1.1 250

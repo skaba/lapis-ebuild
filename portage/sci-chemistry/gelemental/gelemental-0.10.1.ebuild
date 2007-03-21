@@ -4,7 +4,7 @@
 
 inherit gnome2
 
-DESCRIPTION="assoGiate is a MIME file types editor for GNOME."
+DESCRIPTION="gElemental is a periodic table viewer that provides detailed information on the chemical elements."
 HOMEPAGE="http://www.kdau.com/projects/gelemental/"
 SRC_URI="http://www.kdau.com/files/${P}.tar.bz2"
 

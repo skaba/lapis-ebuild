@@ -24,16 +24,3 @@ DEPEND="${RDEPEND}
                    >=sys-devel/gettext-0.12.0
 		   >=sys-devel/libtool-1.3.5"
 
-
-
-src_unpack() {
-	gnome2_src_unpack
-}
-
-src_compile() {
-	gnome2_src_compile
-}
-
-src_install() {
-	gnome2_src_install
-}

@@ -50,4 +50,6 @@ src_install() {
 	java-pkg_dojar src/${PN}.jar
 	use source && java-pkg_dosrc src/
 	java-pkg_dolauncher jtagger --main com.googlepages.dronten.jtagger.JTagger
+	newicon src/com/googlepages/dronten/jtagger/resource/jTagger.icon.png ${PN}.png
+	make_desktop_entry jtagger "JTagger" ${PN}.png
 }

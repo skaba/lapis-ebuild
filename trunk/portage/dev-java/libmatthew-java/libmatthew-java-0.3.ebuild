@@ -10,7 +10,7 @@ SRC_URI="http://www.matthew.ath.cx/projects/java/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="source"
 
 RDEPEND=">=virtual/jre-1.5"
@@ -18,6 +18,7 @@ DEPEND=">=virtual/jdk-1.5"
 
 src_compile() {
 	append-ldflags -lc
+	use amd64 && append-flags -fPIC
 	emake -j1 LDFLAGS="$(raw-ldflags) -shared" JCFLAGS="$(java-pkg_javac-args)"
 }
 

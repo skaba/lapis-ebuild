@@ -1,8 +1,8 @@
-DIST ntfs-config-0.5.5.tar.gz 178199 RMD160 b09473a6a6f9329d4f02de52c5326a78acbd0aa5 SHA1 b3166e286f57e883ad11bfac8e5cf8ea16ae56e5 SHA256 6f89ef7c19eefecdf2d751febfa84c429ec97aa49c28068ee4d80288368520e6
-EBUILD ntfs-config-0.5.5.ebuild 778 RMD160 275a61226e6fda101a1cce2a76ef04135e1b075f SHA1 0169400cf2d618aaf805df1347f5f4deeb6148fc SHA256 864594bf4eeb800be1bbd0cc5b6faccca8b7dcd0f2e68076fa78f88d9647abcd
-MD5 6b9fa3c2123f7c6889277fcc469418f9 ntfs-config-0.5.5.ebuild 778
-RMD160 275a61226e6fda101a1cce2a76ef04135e1b075f ntfs-config-0.5.5.ebuild 778
-SHA256 864594bf4eeb800be1bbd0cc5b6faccca8b7dcd0f2e68076fa78f88d9647abcd ntfs-config-0.5.5.ebuild 778
-MD5 301dd3c4ff07e26f10341e856ee2bff6 files/digest-ntfs-config-0.5.5 253
-RMD160 7f658e38fdf4ea1c08589b159801dabfab31c729 files/digest-ntfs-config-0.5.5 253
-SHA256 04b876b8f4470dd9dfcb195f5473fa77ae0e112142f537071272b5577dd22ded files/digest-ntfs-config-0.5.5 253
+DIST ntfs-config-1.0.1.tar.gz 261807 RMD160 37e67dd1e6ac53b7a170ee35cae1c2cf90dbef07 SHA1 05614d394530e014a0004513058ad665a762249e SHA256 611dbcfa7aebf44ef8ad170d16952e256aec055e4f2cb334cf20a12a75bbdcb2
+EBUILD ntfs-config-1.0.1.ebuild 745 RMD160 d853374e57b880dea5030a118eecdf24e8537c82 SHA1 845add3edd2322aeb75513297e424ef0eec1ae25 SHA256 d8ee2d06fe0f44401a9eccf5026868680b3b52ebb6fcb0cb93f261883dfda3ff
+MD5 8ac376f6ebaff5bf5e20168e9b9f6ac2 ntfs-config-1.0.1.ebuild 745
+RMD160 d853374e57b880dea5030a118eecdf24e8537c82 ntfs-config-1.0.1.ebuild 745
+SHA256 d8ee2d06fe0f44401a9eccf5026868680b3b52ebb6fcb0cb93f261883dfda3ff ntfs-config-1.0.1.ebuild 745
+MD5 24ebe9df94bd7a580dd62b2402e4ff5e files/digest-ntfs-config-1.0.1 253
+RMD160 63c33d2ffeceb8398841ef2ccbd2714c721a5216 files/digest-ntfs-config-1.0.1 253
+SHA256 15bf42adea315448312b15ffd04700fff76c773296f5ec936051745b9bb28c36 files/digest-ntfs-config-1.0.1 253

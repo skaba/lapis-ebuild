@@ -12,7 +12,7 @@ SRC_URI="http://zemberek.googlecode.com/files/zemberek-server-0.7_20070306.zip"
 
 LICENSE="MPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 S=${WORKDIR}/${PN}
 
 RDEPEND=">=virtual/jre-1.5

@@ -1,24 +1,31 @@
---- Makefile.old	2006-11-25 16:06:58.000000000 +0200
-+++ Makefile	2007-01-15 20:13:31.000000000 +0200
-@@ -29,16 +29,18 @@
+--- Makefile	2007-05-29 16:13:41.000000000 +0300
++++ Makefile.fixed	2007-07-30 18:57:18.000000000 +0300
+@@ -29,19 +29,23 @@
  	touch .bindir
  
  man/%.1: %.sgml .mandir
 -	docbook-to-man $< > $@
 +	docbook2man $<
 +	mv IMDB-TOOLS.1 $@
- 
+ %.1: %.sgml .mandir
+-	docbook-to-man $< > $@
++	docbook2man $<
++	mv IMDB-TOOLS.5 $@
  man/%.5: %.sgml .mandir
+-	docbook-to-man $< > $@
++	docbook2man $<
++	mv IMDB-TOOLS.5 $@
+ %.5: %.sgml .mandir
 -	docbook-to-man $< > $@
 +	docbook2man $<
 +	mv IMDB-TOOLS.5 $@
  
  bin/%: %.sh .bindir
- 	sed "s,%PREFIX%,$(PREFIX),"  < $< > $@
+ 	sed "s,%PREFIX%,$(PREFIX),;s,%VERSION%,$(VERSION),"  < $< > $@
  	chmod +x $@
  
 -install: install-bin install-man install-doc
 +install: install-bin install-man
  	
- install-bin: bin/imdb-get bin/imdb-rename bin/imdb-link bin/imdb-update-cache bin/imdb
+ install-bin: bin/imdb-get bin/imdb-rename bin/imdb-link bin/imdb-update-cache bin/imdb bin/imdb-fxd
  	install -d $(DESTDIR)$(BINPREFIX)

@@ -9,7 +9,7 @@ HOMEPAGE="http://www.matthew.ath.cx/projects/imdb-tools/"
 SRC_URI="http://www.matthew.ath.cx/projects/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-misc/curl"

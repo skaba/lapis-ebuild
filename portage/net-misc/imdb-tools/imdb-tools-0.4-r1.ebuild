@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="net-misc/curl"
+RDEPEND="net-misc/curl
+	app-admin/realpath"
 
 DEPEND="app-text/docbook-sgml-utils"
 

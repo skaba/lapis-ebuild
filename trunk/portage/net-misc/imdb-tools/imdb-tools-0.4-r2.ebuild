@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/makefile.patch
+	epatch ${FILESDIR}/imdb_get.diff
 }
 
 src_compile() {

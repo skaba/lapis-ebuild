@@ -1,0 +1,3 @@
+#!/bin/sh
+dfodir=/opt/desktopflickrorganizer
+MONO_PATH=$dfodir/lib:$MONO_PATH mono $dfodir/DesktopFlickrOrganizer.exe

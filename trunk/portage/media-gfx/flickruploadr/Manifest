@@ -1,0 +1,8 @@
+DIST FlickrUploadr-1.0.0.tar.gz 12164 RMD160 4da99a041f3e596bbad90903ab107979b8b372c9 SHA1 03164ac5769b5872e34d688155a0c243f3ea9356 SHA256 f3a2eb9ff58d98c055d20c73bcd39c3281931b953ba549138df5cf2a695b5223
+EBUILD flickruploadr-1.0.0-r1.ebuild 551 RMD160 da034486e82cae35e6c9f2d59f612aaf9a0aca3e SHA1 521ce39f46905a5472a218a4d0f681657eee1d3f SHA256 c4ef90fdbbed23dc9996bc2d951a28487d152c5d213831ae18397446255c13b9
+MD5 c5af6ef9d28c18ccb8bb1285ab76edc3 flickruploadr-1.0.0-r1.ebuild 551
+RMD160 da034486e82cae35e6c9f2d59f612aaf9a0aca3e flickruploadr-1.0.0-r1.ebuild 551
+SHA256 c4ef90fdbbed23dc9996bc2d951a28487d152c5d213831ae18397446255c13b9 flickruploadr-1.0.0-r1.ebuild 551
+MD5 d98a5aaba6c4b294d4f6f1b9acb06422 files/digest-flickruploadr-1.0.0-r1 256
+RMD160 cb0d57a52459a5ce31239de6a3cbf1c3698103ce files/digest-flickruploadr-1.0.0-r1 256
+SHA256 e44b3958321801fa99c6fe49739e55ebe518aae8ad83c287a88618e73eb9f44f files/digest-flickruploadr-1.0.0-r1 256

@@ -1,8 +1,0 @@
-DIST menu-file-browser-applet-0.3.0.tar.gz 54659 RMD160 00912847ec403e27f9dc6f78d0865bb239c67a40 SHA1 036c168e37af89ade884b74affc32bafd97d6104 SHA256 215fba4c2ce0e4e3aaeab8a33b3803bfc9397938bbab03df7c2943037d5b8f40
-EBUILD menu-file-browser-applet-0.3.0.ebuild 889 RMD160 34843629fd036f4882fd0e66c3fcaf9ec6fbab97 SHA1 9b67eaa933139d3d1d71ed4acdc0cfedd2538057 SHA256 d4a1195cc25e2a5a74ada76e0fb1eb9c67eaaf946c0f646d5a95b0b2d39ebe33
-MD5 f1ad6b428ab24979b139ba33b0c7ac73 menu-file-browser-applet-0.3.0.ebuild 889
-RMD160 34843629fd036f4882fd0e66c3fcaf9ec6fbab97 menu-file-browser-applet-0.3.0.ebuild 889
-SHA256 d4a1195cc25e2a5a74ada76e0fb1eb9c67eaaf946c0f646d5a95b0b2d39ebe33 menu-file-browser-applet-0.3.0.ebuild 889
-MD5 a750f774db4d87be555718c4b8798929 files/digest-menu-file-browser-applet-0.3.0 289
-RMD160 d92f3baf6a4375b2413671e32bef6316735d9efe files/digest-menu-file-browser-applet-0.3.0 289
-SHA256 001872c6268dcabdebc8ae40ae713cf5d0519b65a359a3006c7c75adfc377c40 files/digest-menu-file-browser-applet-0.3.0 289

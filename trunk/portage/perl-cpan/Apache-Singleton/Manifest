@@ -1,0 +1,8 @@
+DIST Apache-Singleton-0.07.tar.gz 3275 RMD160 6d986a8c9e328bea413f4c8429a194bb6cd17da5 SHA1 e2117ceb5debffad00c87e243325af9ea4edbbd3 SHA256 ba438dc11e3ae7f9734bfd673f6b055142acdfc5dfb169f972dadeb59b3d0490
+EBUILD Apache-Singleton-0.07.ebuild 523 RMD160 90b9b28f68a60e1f05c055a38278eef5ee0f0717 SHA1 a78be211f53179c53bc6e8209b78116de44a35f4 SHA256 0fbab48a503f83ef8bb91ad11242faef241715da1e3bb01e1240970e34e8b683
+MD5 dbc929a76ee26a5c8c9e9455098e7089 Apache-Singleton-0.07.ebuild 523
+RMD160 90b9b28f68a60e1f05c055a38278eef5ee0f0717 Apache-Singleton-0.07.ebuild 523
+SHA256 0fbab48a503f83ef8bb91ad11242faef241715da1e3bb01e1240970e34e8b683 Apache-Singleton-0.07.ebuild 523
+MD5 4aa89ed2923d4067b7eb5201a816ef9e files/digest-Apache-Singleton-0.07 259
+RMD160 ed11f09f8acf7e01b858366dec0c1a4913243cb8 files/digest-Apache-Singleton-0.07 259
+SHA256 8030487d3daea2f382bcb749f281fe9f33fcb4af6fd353469c964ed243be9999 files/digest-Apache-Singleton-0.07 259

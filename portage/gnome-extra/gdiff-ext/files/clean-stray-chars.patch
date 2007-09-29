@@ -1,0 +1,9 @@
+diff -Nur gdiff-ext-0.2.4/setup/src/callbacks.c gdiff-ext-0.2.4_fixed/setup/src/callbacks.c
+--- gdiff-ext-0.2.4/setup/src/callbacks.c	2007-09-28 08:42:00.000000000 +0300
++++ gdiff-ext-0.2.4_fixed/setup/src/callbacks.c	2007-09-29 21:03:02.000000000 +0300
+@@ -1,4 +1,4 @@
+-﻿/*
++/*
+  * Copyright (c) 2007, Sergey Zorin. All rights reserved.
+  *
+  * This software is distributable under the BSD license. See the terms

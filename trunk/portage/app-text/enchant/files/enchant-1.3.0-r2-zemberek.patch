@@ -1,6 +1,6 @@
-diff -Nur enchant-1.3.0/configure.in enchant-1.3.0_patched/configure.in
+diff -Nur enchant-1.3.0/configure.in enchant-1.3.0_zemberek/configure.in
 --- enchant-1.3.0/configure.in	2006-07-22 20:34:46.000000000 +0300
-+++ enchant-1.3.0_patched/configure.in	2007-09-22 08:41:30.000000000 +0300
++++ enchant-1.3.0_zemberek/configure.in	2007-10-06 09:24:36.000000000 +0300
 @@ -197,6 +197,28 @@
  
  AM_CONDITIONAL(WITH_ASPELL, test "$build_aspell" = yes)
@@ -45,26 +45,27 @@ diff -Nur enchant-1.3.0/configure.in enchant-1.3.0_patched/configure.in
 +	Build Zemberek backend:		${build_zemberek}
  	Build a relocatable library:	${relocatable_library}
  "
-diff -Nur enchant-1.3.0/data/enchant.ordering enchant-1.3.0_patched/data/enchant.ordering
+diff -Nur enchant-1.3.0/data/enchant.ordering enchant-1.3.0_zemberek/data/enchant.ordering
 --- enchant-1.3.0/data/enchant.ordering	2005-11-28 07:05:26.000000000 +0200
-+++ enchant-1.3.0_patched/data/enchant.ordering	2007-09-22 08:38:31.000000000 +0300
-@@ -2,3 +2,4 @@
++++ enchant-1.3.0_zemberek/data/enchant.ordering	2007-10-06 09:25:46.000000000 +0300
+@@ -2,3 +2,5 @@
  he:hspell,myspell
  he_IL:hspell,myspell
  yi:uspell
 +tr:zemberek
-diff -Nur enchant-1.3.0/src/Makefile.am enchant-1.3.0_patched/src/Makefile.am
++tr_TR:zemberek
+diff -Nur enchant-1.3.0/src/Makefile.am enchant-1.3.0_zemberek/src/Makefile.am
 --- enchant-1.3.0/src/Makefile.am	2006-05-06 16:38:33.000000000 +0300
-+++ enchant-1.3.0_patched/src/Makefile.am	2007-09-22 08:38:31.000000000 +0300
++++ enchant-1.3.0_zemberek/src/Makefile.am	2007-10-06 09:24:36.000000000 +0300
 @@ -1,4 +1,4 @@
 -SUBDIRS=. aspell ispell uspell myspell hspell applespell
 +SUBDIRS=. aspell ispell uspell myspell hspell applespell zemberek
  
  INCLUDES=-I$(top_srcdir) $(ENCHANT_CFLAGS) -DENCHANT_GLOBAL_MODULE_DIR=\"$(libdir)/enchant\" -DENCHANT_GLOBAL_ORDERING=\"$(datadir)/enchant\" -D_ENCHANT_BUILD=1
  
-diff -Nur enchant-1.3.0/src/zemberek/Makefile.am enchant-1.3.0_patched/src/zemberek/Makefile.am
+diff -Nur enchant-1.3.0/src/zemberek/Makefile.am enchant-1.3.0_zemberek/src/zemberek/Makefile.am
 --- enchant-1.3.0/src/zemberek/Makefile.am	1970-01-01 02:00:00.000000000 +0200
-+++ enchant-1.3.0_patched/src/zemberek/Makefile.am	2007-09-22 08:38:31.000000000 +0300
++++ enchant-1.3.0_zemberek/src/zemberek/Makefile.am	2007-10-06 09:24:36.000000000 +0300
 @@ -0,0 +1,20 @@
 +if WITH_ZEMBEREK
 +target_lib = libenchant_zemberek.la
@@ -86,9 +87,9 @@ diff -Nur enchant-1.3.0/src/zemberek/Makefile.am enchant-1.3.0_patched/src/zembe
 +	zemberek_provider.cpp
 +
 +
-diff -Nur enchant-1.3.0/src/zemberek/zemberek.cpp enchant-1.3.0_patched/src/zemberek/zemberek.cpp
+diff -Nur enchant-1.3.0/src/zemberek/zemberek.cpp enchant-1.3.0_zemberek/src/zemberek/zemberek.cpp
 --- enchant-1.3.0/src/zemberek/zemberek.cpp	1970-01-01 02:00:00.000000000 +0200
-+++ enchant-1.3.0_patched/src/zemberek/zemberek.cpp	2007-09-22 08:38:31.000000000 +0300
++++ enchant-1.3.0_zemberek/src/zemberek/zemberek.cpp	2007-10-06 09:24:36.000000000 +0300
 @@ -0,0 +1,84 @@
 +/* Copyright (C) 2006 Barış Metin <baris@pardus.org.tr>
 + * Copyright (C) 2007 Serkan Kaba <serkan_kaba@yahoo.com>
@@ -174,9 +175,9 @@ diff -Nur enchant-1.3.0/src/zemberek/zemberek.cpp enchant-1.3.0_patched/src/zemb
 +    *out_n_suggs = g_strv_length(suggs);
 +    return suggs;
 +}
-diff -Nur enchant-1.3.0/src/zemberek/zemberek.h enchant-1.3.0_patched/src/zemberek/zemberek.h
+diff -Nur enchant-1.3.0/src/zemberek/zemberek.h enchant-1.3.0_zemberek/src/zemberek/zemberek.h
 --- enchant-1.3.0/src/zemberek/zemberek.h	1970-01-01 02:00:00.000000000 +0200
-+++ enchant-1.3.0_patched/src/zemberek/zemberek.h	2007-09-22 08:38:31.000000000 +0300
++++ enchant-1.3.0_zemberek/src/zemberek/zemberek.h	2007-10-06 09:24:36.000000000 +0300
 @@ -0,0 +1,41 @@
 +/* Copyright (C) 2006 Barış Metin <baris@pardus.org.tr>
 + * Copyright (C) 2007 Serkan Kaba <serkan_kaba@yahoo.com>
@@ -219,9 +220,9 @@ diff -Nur enchant-1.3.0/src/zemberek/zemberek.h enchant-1.3.0_patched/src/zember
 +    DBusGProxy *proxy;
 +};
 +#endif
-diff -Nur enchant-1.3.0/src/zemberek/zemberek_provider.cpp enchant-1.3.0_patched/src/zemberek/zemberek_provider.cpp
+diff -Nur enchant-1.3.0/src/zemberek/zemberek_provider.cpp enchant-1.3.0_zemberek/src/zemberek/zemberek_provider.cpp
 --- enchant-1.3.0/src/zemberek/zemberek_provider.cpp	1970-01-01 02:00:00.000000000 +0200
-+++ enchant-1.3.0_patched/src/zemberek/zemberek_provider.cpp	2007-09-22 08:38:31.000000000 +0300
++++ enchant-1.3.0_zemberek/src/zemberek/zemberek_provider.cpp	2007-10-06 09:24:36.000000000 +0300
 @@ -0,0 +1,144 @@
 +/* Copyright (C) 2006 Barış Metin <baris@pardus.org.tr>
 + * Copyright (C) 2007 Serkan Kaba <serkan_kaba@yahoo.com>

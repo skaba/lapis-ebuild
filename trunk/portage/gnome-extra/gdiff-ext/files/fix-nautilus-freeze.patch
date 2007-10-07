@@ -1,0 +1,10 @@
+--- branches/gdiff-ext-0.2/diff-ext/src/main.c	2007/09/28 05:54:33	475
++++ branches/gdiff-ext-0.2/diff-ext/src/main.c	2007/10/03 03:20:42	480
+@@ -269,7 +269,6 @@
+       
+       g_free(tmp);
+       g_string_free(icon, TRUE);
+-      g_object_unref(G_OBJECT(gconf_client));
+     }
+   }
+ 

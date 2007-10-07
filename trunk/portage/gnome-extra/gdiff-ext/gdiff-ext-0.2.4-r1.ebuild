@@ -26,4 +26,5 @@ src_unpack() {
 	gnome2_src_unpack
 	cd ${S} || die
 	epatch ${FILESDIR}/clean-stray-chars.patch
+	epatch ${FILESDIR}/fix-nautilus-freeze.patch
 }

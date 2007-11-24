@@ -12,7 +12,7 @@ HOMEPAGE="http://www.blommers-it.nl/libhttpd/"
 SRC_URI="mirror://sourceforge/java-libhttpd/${PN}-src_v${MY_PV}.zip
 	 doc? ( mirror://sourceforge/java-libhttpd/${PN}-doc_v${MY_PV}.zip )"
 
-LICENSE="BlommersIT"
+LICENSE="Apache-2.0"
 KEYWORDS="~x86 ~amd64"
 
 SLOT="0"

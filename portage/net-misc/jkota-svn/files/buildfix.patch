@@ -1,0 +1,63 @@
+diff -Nur jkota/build.xml jkota_patched/build.xml
+--- jkota/build.xml	2007-12-01 01:27:20.000000000 +0200
++++ jkota_patched/build.xml	2007-12-01 02:19:00.000000000 +0200
+@@ -4,24 +4,7 @@
+ 		<fileset dir="../../svnant-1.0.0/lib">
+ 			<include name="*.jar"/>
+ 		</fileset>
+-	</path>	
+-	
+-	<taskdef name="launch4j"
+-		onerror="report"
+-		classpath="../../launch4j/launch4j.jar" 
+-		classname="net.sf.launch4j.ant.Launch4jTask"
+-	/>
+-	
+-	<taskdef name="svn"
+-		onerror="report"
+-		classpathref="svnantlibs"
+-		classname="org.tigris.subversion.svnant.SvnTask"
+-	/>
+-	<taskdef
+-		classpath="../../ant-googlecode/ant-googlecode.jar"
+-		classname="net.bluecow.googlecode.ant.GoogleCodeUploadTask"
+-		name="gcupload"
+-	/>
++	</path>
+ 	
+ 	<property file="build.properties"/>
+ 	<property file="../../googlecode-login.properties"/>
+@@ -153,31 +136,4 @@
+ 		<delete file="jkota.jar"/>
+ 	</target>
+ 	
+-	<target name="upload" depends="all_packages">
+-		<gcupload
+-			username="${gc.username}"
+-			password="${gc.password}"
+-			projectname="jkota"
+-			filename="dist/jkota-${fullversion}.tar.gz"
+-			targetfilename="jkota-${fullversion}.tar.gz"
+-			summary="JKota ${fullversion} Linux paketi"
+-		/>
+-		<gcupload
+-			username="${gc.username}"
+-			password="${gc.password}"
+-			projectname="jkota"
+-			filename="dist/jkota-${fullversion}.zip"
+-			targetfilename="jkota-${fullversion}.zip"
+-			summary="JKota ${fullversion} Windows paketi"
+-		/>
+-		<gcupload
+-			username="${gc.username}"
+-			password="${gc.password}"
+-			projectname="jkota"
+-			filename="dist/jkota-${fullversion}-src.zip"
+-			targetfilename="jkota-${fullversion}-src.zip"
+-			summary="JKota ${fullversion} kaynak kodu"
+-		/>
+-	</target>
+-	
+-</project>
+\ Dosya sonunda yenisatır yok.
++</project>

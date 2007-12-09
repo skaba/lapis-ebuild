@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="test"
-#S="${WORKDIR}"
+#EANT_ANT_TASKS="ant-nodeps svnant"
 
 RDEPEND=">=virtual/jre-1.6
 	dev-java/blowfishj
@@ -24,7 +24,12 @@ RDEPEND=">=virtual/jre-1.6
 DEPEND=">=virtual/jdk-1.6
 	dev-java/blowfishj
 	dev-java/jtidy
-	dev-java/httpunit"
+	dev-java/httpunit
+	dev-java/svnant"
+
+src_compile() {
+	ANT_TASKS="ant-nodeps svnant" eant jar
+}
 
 src_unpack() {
 	subversion_src_unpack

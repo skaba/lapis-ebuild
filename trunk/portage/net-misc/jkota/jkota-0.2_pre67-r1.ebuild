@@ -19,7 +19,7 @@ S="${WORKDIR}"
 RDEPEND=">=virtual/jre-1.6
 	dev-java/blowfishj
 	dev-java/jtidy
-	dev-java/httpunit"
+	>=dev-java/httpunit-1.6.2-r2"
 
 DEPEND=">=virtual/jdk-1.6
 	dev-java/blowfishj

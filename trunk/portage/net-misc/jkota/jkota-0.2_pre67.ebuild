@@ -5,7 +5,7 @@
 WANT_ANT_TASKS="ant-nodeps"
 inherit eutils java-pkg-2 java-ant-2
 
-DESCRIPTION="ADSL kota kontrol programı"
+DESCRIPTION="Internet kota kontrol programı"
 HOMEPAGE="http://jkota.googlecode.com/"
 #SRC_URI="http://jkota.googlecode.com/files/${P}-src.zip"
 SRC_URI="http://ebuild.linux-sevenler.org/distfiles/${P}-src.zip"
@@ -30,12 +30,11 @@ src_unpack() {
 	unpack ${A}
 	rm lib/*.jar || die
 	java-pkg_jarfrom --into lib blowfishj,jtidy,httpunit
-	epatch ${FILESDIR}/buildfix.patch
 }
 
 src_install() {
 	java-pkg_dojar ${PN}.jar
-	java-pkg_dolauncher ${PN} --main com.googlecode.jkota.swing.SwingADSLKota
-	newicon favicon.gif ${PN}.gif
-	make_desktop_entry ${PN} "JKota" ${PN}.gif
+	java-pkg_dolauncher ${PN} --main com.googlecode.jkota.swing.SwingKota
+	newicon favicon.png ${PN}.png
+	make_desktop_entry ${PN} "JKota" ${PN}.png
 }

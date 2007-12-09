@@ -5,3 +5,7 @@
 # Serkan Kaba <serkan_kaba@yahoo.com> (11 Mar 2007)
 # Masked for testing
 app-misc/pardusman-svn
+
+# Serkan Kaba <serkan_kaba@yahoo.com> (8 Dec 2007)
+# Svnant doesnot work
+app-misc/jkota-svn

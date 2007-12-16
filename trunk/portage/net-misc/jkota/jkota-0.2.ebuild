@@ -7,8 +7,8 @@ inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Internet kota kontrol programı"
 HOMEPAGE="http://jkota.googlecode.com/"
-#SRC_URI="http://jkota.googlecode.com/files/${P}-src.zip"
-SRC_URI="http://ebuild.linux-sevenler.org/distfiles/${P}-src.zip"
+SRC_URI="http://jkota.googlecode.com/files/${P}-src.zip"
+#SRC_URI="http://ebuild.linux-sevenler.org/distfiles/${P}-src.zip"
 
 LICENSE="GPL-3"
 SLOT="0"

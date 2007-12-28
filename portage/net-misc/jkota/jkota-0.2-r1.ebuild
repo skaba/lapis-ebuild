@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	rm lib/*.jar || die
 	java-pkg_jarfrom --into lib blowfishj,jtidy,httpunit
+	epatch ${FILESDIR}/${P}-settings.patch
 }
 
 src_install() {

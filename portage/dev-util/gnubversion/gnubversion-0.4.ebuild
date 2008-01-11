@@ -8,7 +8,7 @@ DESCRIPTION="GNOME interface to Subversion"
 HOMEPAGE="http://www.sf.net/projects/gnubversion"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug"

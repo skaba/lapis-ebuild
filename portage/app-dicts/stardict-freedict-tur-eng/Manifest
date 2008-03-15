@@ -1,8 +1,2 @@
 DIST stardict-dictd_www.freedict.de_tur-eng-2.4.2.tar.bz2 20377 RMD160 65ae4c99c6c0bc64c45caab8c9ca34cd75b7e8f5 SHA1 0865bff83eecde79cce231441c2aa02ffa843362 SHA256 d190042df34f20f29bf2e3c271b639d00b1dd5bad29e201947b0fd3877c33e34
 EBUILD stardict-freedict-tur-eng-2.4.2.ebuild 342 RMD160 ddcc54ff5ac8b9250a64a7231dd9816eaec4a820 SHA1 073f840a98e23cef684b23e83c0d6194e319b053 SHA256 f648afd0a38fe5a409ef90d7473562642f498d0b73c7447332b959ea613efb38
-MD5 777c108dc9b67cc96ccb08e3a38f9539 stardict-freedict-tur-eng-2.4.2.ebuild 342
-RMD160 ddcc54ff5ac8b9250a64a7231dd9816eaec4a820 stardict-freedict-tur-eng-2.4.2.ebuild 342
-SHA256 f648afd0a38fe5a409ef90d7473562642f498d0b73c7447332b959ea613efb38 stardict-freedict-tur-eng-2.4.2.ebuild 342
-MD5 ddbca1967f2be8646f93a4b049f4763b files/digest-stardict-freedict-tur-eng-2.4.2 334
-RMD160 0b5b1fb5fce37e64e60e892ecad924ed1ff978be files/digest-stardict-freedict-tur-eng-2.4.2 334
-SHA256 aaabebf6f06a085c9894b349fc9a01225752c01c21e477d30c18ce1448939940 files/digest-stardict-freedict-tur-eng-2.4.2 334

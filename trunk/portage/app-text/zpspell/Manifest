@@ -1,8 +1,2 @@
 DIST zpspell-0.4.tar.bz2 10340 RMD160 33f7155fb8aa382e7f927dbadc7604e0b3d646da SHA1 a5d85a7f1ae09c2dbe23ad98a3ff3089620e7824 SHA256 df309b09f95d18ae247b12a91c1e7a06d071aad5ea848a3439498afd42a6fa89
 EBUILD zpspell-0.4-r1.ebuild 655 RMD160 f5dfb00f44289ad8bc03e11a9960aa7d95a49721 SHA1 d63902c1f27e3723e41bf2895b6a08f04e6eddc3 SHA256 a9693cc45e3b1a621b0f0ede87382b612d2f010dc83f68fcefd98e8a3c26deba
-MD5 e9a234792d25a2e2ffe42a67ea0f36e0 zpspell-0.4-r1.ebuild 655
-RMD160 f5dfb00f44289ad8bc03e11a9960aa7d95a49721 zpspell-0.4-r1.ebuild 655
-SHA256 a9693cc45e3b1a621b0f0ede87382b612d2f010dc83f68fcefd98e8a3c26deba zpspell-0.4-r1.ebuild 655
-MD5 d089949fe6b40d78b8cffed5a4c298df files/digest-zpspell-0.4-r1 235
-RMD160 e3cc746f4d9e68e20cb63c2d31efc1d7ccb24afb files/digest-zpspell-0.4-r1 235
-SHA256 46d5a57cba9a46a0b9dc419aec694da115453fe7872df499660fd0e8e425d582 files/digest-zpspell-0.4-r1 235

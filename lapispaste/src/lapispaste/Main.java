@@ -32,6 +32,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -80,22 +81,19 @@ public class Main {
 	}
     }
 
-    private static StringBuffer readFile(File file) {
-	StringBuffer content = new StringBuffer();
-
+    private static StringBuffer readData(Reader in) {
 	try {
-	    BufferedReader input = new BufferedReader(new FileReader(file));
+	    BufferedReader read = new BufferedReader(in);
+	    StringBuffer content = new StringBuffer();
 	    String line = null;
-
-	    // read line by line :o
-	    while ((line = input.readLine()) != null) {
+	    while ((line = read.readLine()) != null) {
 		content.append(line);
 		content.append("\n");
 	    }
-
 	    return content;
-	} catch (IOException ex) {
-	    ex.printStackTrace();
+	} catch (IOException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
 	    return null;
 	}
     }
@@ -131,23 +129,10 @@ public class Main {
 	    System.out.println("lapispaste version " + version);
 	else if (cmd.hasOption("f")) {
 	    File file = new File(cmd.getOptionValue("f"));
-	    StringBuffer pdata = readFile(file);
+	    StringBuffer pdata = readData(new FileReader(file));
 	    paster(pastemap, pdata);
 	} else if (cmd.hasOption("p")) {
-	    BufferedReader pipe = new BufferedReader(new InputStreamReader(
-		    System.in));
-	    StringBuffer pdata = new StringBuffer();
-	    while (true) {
-		String rline;
-		try {
-		    rline = pipe.readLine();
-		    if (rline == null)
-			break;
-		    pdata.append(rline + "\n");
-		} catch (IOException ex) {
-		    ex.printStackTrace();
-		}
-	    }
+	    StringBuffer pdata = readData(new InputStreamReader(System.in));
 	    paster(pastemap, pdata);
 	} else {
 	    // Did not recieve what was expected

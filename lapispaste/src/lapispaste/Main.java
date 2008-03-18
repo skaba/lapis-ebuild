@@ -46,7 +46,7 @@ import org.apache.commons.cli.PosixParser;
 
 public class Main {
 
-    public static void paster(Map<String, String> pastemap, StringBuffer pdata) {
+    private static void paster(Map<String, String> pastemap, StringBuffer pdata) {
 	try {
 	    URL url = new URL("http://paste.linux-sevenler.org/index.php");
 	    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -80,7 +80,7 @@ public class Main {
 	}
     }
 
-    public static StringBuffer readFile(File file) {
+    private static StringBuffer readFile(File file) {
 	StringBuffer content = new StringBuffer();
 
 	try {

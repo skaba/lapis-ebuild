@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -26,7 +26,7 @@ RDEPEND="${MONODEPS}
 	 	x11-drivers/nvidia-drivers
 	 	media-video/nvidia-settings
 	 )"
-	 
+
 DEPEND="${MONODEPS}
 	dev-util/pkgconfig"
 
@@ -36,6 +36,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc NEWS README
 }

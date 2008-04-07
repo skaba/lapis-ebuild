@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://code.google.com/p/dfo/"
 SRC_URI="http://dfo.googlecode.com/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.1
@@ -24,25 +24,23 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
-    einfo "/opt/desktopflickrorganizer"
-}
+src_compile() { :; }
 
 src_install() {
 	insinto /opt/desktopflickrorganizer
-        doins DesktopFlickrOrganizer.exe
+	doins DesktopFlickrOrganizer.exe
 	doins run.sh
 	doins license.txt
 
 	insinto /opt/desktopflickrorganizer/icons
 	doins icons/*
-	
-        insinto /opt/desktopflickrorganizer/lib
+
+	insinto /opt/desktopflickrorganizer/lib
 	doins lib/*
 
-	dobin ${FILESDIR}/dfo
+	dobin "${FILESDIR}"/dfo
 
-	make_desktop_entry dfo "DesktopFlickrOrganizer" "/opt/desktopflickrorganizer/icons/FontBookThumbnail.png" Graphics 
+	make_desktop_entry dfo "DesktopFlickrOrganizer" "/opt/desktopflickrorganizer/icons/FontBookThumbnail.png" Graphics
 }
 
 

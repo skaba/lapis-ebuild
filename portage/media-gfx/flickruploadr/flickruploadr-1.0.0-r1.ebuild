@@ -1,5 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 inherit distutils
 
@@ -19,5 +20,5 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	distutils_src_install
-	make_desktop_entry Uploadr "FlickrUploadr" "/usr/share/FlickrUploadr/flickr_logo.gif" Graphics 
+	make_desktop_entry Uploadr "FlickrUploadr" "/usr/share/FlickrUploadr/flickr_logo.gif" Graphics
 }

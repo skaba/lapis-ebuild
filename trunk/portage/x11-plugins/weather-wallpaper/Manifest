@@ -1,8 +1,2 @@
 DIST weather-wallpaper_0.2.0.orig.tar.gz 162848 RMD160 20016838c51319fb45a0882c18e2a926abc4df13 SHA1 b3bea477568aafc4c8e3d563f6b5db5652e25573 SHA256 8b9d588ca834971a618d2e48eaf2c4b5d876214215517afbb0111af3c53e976e
-EBUILD weather-wallpaper-0.2.0.ebuild 747 RMD160 3ef6f89b668583d7c0aca5437cdb9d9fd90448bd SHA1 687143f24ed27a4b8e8a7bd1cedb71e34102ddbc SHA256 b0118499486924f3abddfea22ce022260870acbb6e296dca4b4e0edc6af5807a
-MD5 b6f6e27cb0554557548b1165f41a79f6 weather-wallpaper-0.2.0.ebuild 747
-RMD160 3ef6f89b668583d7c0aca5437cdb9d9fd90448bd weather-wallpaper-0.2.0.ebuild 747
-SHA256 b0118499486924f3abddfea22ce022260870acbb6e296dca4b4e0edc6af5807a weather-wallpaper-0.2.0.ebuild 747
-MD5 13c125d0a369b65ce32633abcfe9a051 files/digest-weather-wallpaper-0.2.0 286
-RMD160 ecb6d913d69a290553915f3c632522193b5729a5 files/digest-weather-wallpaper-0.2.0 286
-SHA256 da45f8cc775803e7e91911178e55c88f875b83efbdb8c626b12ad0f976392776 files/digest-weather-wallpaper-0.2.0 286
+EBUILD weather-wallpaper-0.2.0.ebuild 707 RMD160 8bcf3aaa3eb2b1c8d57f8ce87fb95efdc5e8cf35 SHA1 e14262138e50fb5285b0bcfb48ce2a347e99eeb8 SHA256 3375509c4b7539a8211d22598a59711ac98cc34c58454bd23b77d1cd8ad28555

@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -24,7 +24,7 @@ DOCS="AUTHORS ChangeLog"
 
 src_unpack() {
 	gnome2_src_unpack
-	cd ${S} || die
-	epatch ${FILESDIR}/clean-stray-chars.patch
-	epatch ${FILESDIR}/fix-nautilus-freeze.patch
+	cd "${S}" || die
+	epatch "${FILESDIR}"/clean-stray-chars.patch
+	epatch "${FILESDIR}"/fix-nautilus-freeze.patch
 }

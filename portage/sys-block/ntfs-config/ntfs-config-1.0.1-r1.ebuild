@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,17 +14,19 @@ IUSE="nls"
 DEPEND="sys-fs/udev
 	nls? ( sys-devel/gettext )
 	>=gnome-base/libglade-2.0
-        >=x11-libs/gtk+-2.6"
+	>=x11-libs/gtk+-2.6"
+
 RDEPEND="${DEPEND}
-        sys-fs/ntfs3g"
+	sys-fs/ntfs3g"
+
 src_compile() {
 	econf  $(use_enable nls)  || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
 
 

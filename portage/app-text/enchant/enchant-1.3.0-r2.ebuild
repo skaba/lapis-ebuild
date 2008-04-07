@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header :
+# $Header: $
 
 inherit autotools
 
@@ -25,10 +25,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PF}-zemberek.patch
-	epatch ${FILESDIR}/automake-1.10.patch
-	sh autogen.sh
+	cd "${S}" || die
+	epatch "${FILESDIR}/${PF}"-zemberek.patch
+	epatch "${FILESDIR}"/automake-1.10.patch
+	sh autogen.sh || die
 }
 
 src_compile() {
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO
 
 }

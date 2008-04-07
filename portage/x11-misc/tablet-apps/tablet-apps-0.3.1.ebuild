@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,28 +14,26 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 LICENSE="GPL-2"
 RDEPEND=">=x11-libs/gtk+-2.10.0
-                 >=dev-python/pygtk-2.6.0
-	         >=dev-python/gnome-python-desktop-2.14.0
-                 input_devices_wacom? ( x11-drivers/linuxwacom )"
+	>=dev-python/pygtk-2.6.0
+	>=dev-python/gnome-python-desktop-2.14.0
+	input_devices_wacom? ( x11-drivers/linuxwacom )"
 
 
-src_compile() {
-    einfo "..."
-}
+src_compile() { :; }
 
 src_install() {
 	insinto /usr/share/pressure-applet
-        doins input-tablet.png
+	doins input-tablet.png
 
 	insinto /usr/share/tablet-capplet
 	doins input-tablet.svg
 	doins tablet-capplet.glade
 
-        dobin pressure-applet.py
+	dobin pressure-applet.py
 	dobin tablet-capplet.py
-         
-        insinto /usr/lib/bonobo/servers/
-        doins pressure-applet.server
+
+	insinto /usr/lib/bonobo/servers/
+	doins pressure-applet.server
 
 	domenu tablet-capplet.desktop
 }

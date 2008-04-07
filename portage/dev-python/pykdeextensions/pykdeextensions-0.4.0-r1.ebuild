@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,7 +16,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/pykdedist-compile-option.patch
-	epatch ${FILESDIR}/fix-moduledir.diff
-	epatch ${FILESDIR}/paths.patch
+	epatch "${FILESDIR}"/pykdedist-compile-option.patch
+	epatch "${FILESDIR}"/fix-moduledir.diff
+	epatch "${FILESDIR}"/paths.patch
 }

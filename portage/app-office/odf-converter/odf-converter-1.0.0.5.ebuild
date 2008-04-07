@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -34,12 +34,12 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
-        fdo-mime_mime_database_update
-        use gnome && gnome2_icon_cache_update
+	fdo-mime_mime_database_update
+	use gnome && gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
-        fdo-mime_mime_database_update
-        use gnome && gnome2_icon_cache_update
+	fdo-mime_mime_database_update
+	use gnome && gnome2_icon_cache_update
 }

@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header : $
 
 inherit toolchain-funcs
+
 MY_P=${P}-src
 DESCRIPTION="A very simple utility to convert DiscJuggler image to the standard ISO-9660 format."
 HOMEPAGE="http://developer.berlios.de/projects/cdi2iso"

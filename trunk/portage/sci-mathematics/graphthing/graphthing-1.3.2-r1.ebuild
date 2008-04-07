@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="nls"
 
 DEPEND=">=x11-libs/wxGTK-2.6.1
-	nls? (sys-devel/gettext )
+	nls? ( sys-devel/gettext )
 	sys-devel/flex
 	sys-devel/bison"
 
@@ -27,16 +27,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/sandbox.patch
+	cd "${S}" || die
+	epatch "${FILESDIR}"/sandbox.patch
 }
 
 src_compile() {
 	econf $(use_enable nls) $(use_enable nls langdialog) --with-wx-config="${WX_CONFIG}"  || "econf failed"
-	emake
+	emake || die
 }
 
 src_install() {
-	einstall DESTDIR=${D} || "einstall failed"
-	dodoc COPYING README TODO CREDITS FeatureLog
+	einstall DESTDIR="${D}" || "einstall failed"
+	dodoc README TODO CREDITS FeatureLog
 }

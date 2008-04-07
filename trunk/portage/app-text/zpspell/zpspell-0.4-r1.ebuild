@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -25,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} PREFIX=/usr install
+	emake DESTDIR="${D}" PREFIX=/usr install
 	dodoc AUTHORS README
 }

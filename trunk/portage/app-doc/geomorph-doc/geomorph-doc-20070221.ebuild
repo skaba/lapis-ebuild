@@ -1,8 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-
-
 
 DESCRIPTION="GeoMorph Document"
 HOMEPAGE="http://geomorph.sourceforge.net/frame_en.html"
@@ -14,9 +12,8 @@ LICENSE="GPL-2"
 
 DEPEND=""
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_install() {
-	dohtml -r ${P}/doc/*
-
+	dohtml -r "${P}"/doc/*
 }

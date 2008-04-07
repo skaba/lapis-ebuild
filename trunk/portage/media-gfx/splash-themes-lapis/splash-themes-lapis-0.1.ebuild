@@ -1,4 +1,4 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,5 +13,5 @@ DEPEND=">=media-gfx/splashutils-1.1.9.5"
 
 src_install() {
 	dodir /etc/splash/lapis
-	cp -pR ${WORKDIR}/lapis ${D}/etc/splash
+	cp -pR "${WORKDIR}"/lapis "${D}"/etc/splash
 }

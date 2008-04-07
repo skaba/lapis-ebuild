@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,12 +15,11 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc povray"
 
 DEPEND=">=x11-libs/gtk+-2.4
-        >=virtual/opengl-6.0
-        doc? (app-doc/geomorph-doc)"
+	>=virtual/opengl-6.0
+	doc? ( app-doc/geomorph-doc )"
 
 RDEPEND="${DEPEND}
-         poyrav?  (media-gfx/povray)"
-	 
+	poyrav? ( media-gfx/povray )"
 
 src_compile() {
 	econf || die "configure failed"
@@ -28,5 +27,5 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"	
+	emake DESTDIR="${D}" install || die "install failed"
 }

@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -30,7 +30,6 @@ src_unpack() {
 	unpack ${A}
 	rm lib/*.jar || die
 	java-pkg_jarfrom --into lib blowfishj,jtidy,httpunit
-	epatch ${FILESDIR}/${P}-settings.patch
 }
 
 src_install() {

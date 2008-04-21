@@ -11,6 +11,6 @@ start() {
 
 stop()  {
         ebegin "Stopping zemberek-server"
-        start-stop-daemon --pidfile /var/run/zemberek-server.pid --quiet
+        start-stop-daemon --stop --pidfile /var/run/zemberek-server.pid --quiet
         eend $?
 }

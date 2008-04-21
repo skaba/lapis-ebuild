@@ -39,8 +39,6 @@ src_unpack() {
 	java-pkg_jarfrom zemberek zemberek2-cekirdek.jar
 	java-pkg_jarfrom zemberek zemberek2-tr.jar
 	java-pkg_jarfrom dbus-java dbus.jar
-	java-pkg_jarfrom libmatthew-java unix.jar
-	java-pkg_jarfrom libmatthew-java hexdump.jar
 }
 
 src_compile() {

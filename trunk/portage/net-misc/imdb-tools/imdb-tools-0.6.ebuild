@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,15 +13,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-misc/curl
-	app-admin/realpath"
+	app-admin/realpath
+	app-text/htmltidy"
 
 DEPEND="app-text/docbook-sgml-utils"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/makefile.patch
-	epatch ${FILESDIR}/imdb_get.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/makefile.patch
 }
 
 src_compile() {
@@ -29,6 +29,6 @@ src_compile() {
 }
 
 src_install () {
-	einstall PREFIX=/usr DESTDIR=${D}
-	dodoc INSTALL README COPYING changelog
+	einstall PREFIX=/usr DESTDIR="${D}"
+	dodoc INSTALL README changelog
 }

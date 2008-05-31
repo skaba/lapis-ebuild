@@ -8,7 +8,7 @@ DESCRIPTION="Browse and open files in your home directory from the Gnome panel."
 HOMEPAGE="http://code.google.com/p/gnome-menu-file-browser-applet/"
 SRC_URI="http://gnome-menu-file-browser-applet.googlecode.com/files/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -32,5 +32,5 @@ src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	cmake-utils_src_install
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	dodoc NEWS README
+	dodoc HISTORY README
 }

@@ -1,0 +1,24 @@
+diff -urNp gdiff-ext-0.2.4-orig/configure.ac gdiff-ext-0.2.4/configure.ac
+--- gdiff-ext-0.2.4-orig/configure.ac	2008-06-01 17:53:53.000000000 +0530
++++ gdiff-ext-0.2.4/configure.ac	2008-06-01 18:08:05.000000000 +0530
+@@ -19,7 +19,7 @@ PKG_CHECK_MODULES(DIFF_EXT, [libnautilus
+ AC_SUBST(DIFF_EXT_CFLAGS)
+ AC_SUBST(DIFF_EXT_LIBS)
+ 
+-pkg_modules="gtk+-2.0 >= 2.0.0 gconf-2.0 >= 2.14.0"
++pkg_modules="gtk+-2.0 >= 2.0.0 gconf-2.0 >= 2.14.0 gnome-vfs-2.0 >= 2.14.0"
+ PKG_CHECK_MODULES(SETUP, [$pkg_modules])
+ AC_SUBST(SETUP_CFLAGS)
+ AC_SUBST(SETUP_LIBS)
+diff -urNp gdiff-ext-0.2.4-orig/diff-ext/src/Makefile.am gdiff-ext-0.2.4/diff-ext/src/Makefile.am
+--- gdiff-ext-0.2.4-orig/diff-ext/src/Makefile.am	2008-06-01 17:53:53.000000000 +0530
++++ gdiff-ext-0.2.4/diff-ext/src/Makefile.am	2008-06-01 18:05:23.000000000 +0530
+@@ -5,7 +5,7 @@ INCLUDES = \
+   -DDIFF_EXT_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+   @DIFF_EXT_CFLAGS@
+ 
+-AM_CFLAGS =-Wall -g
++AM_CFLAGS =-Wall -g $(SETUP_CFLAGS)
+ 
+ libdiff_ext_la_SOURCES = main.c
+ 

@@ -4,7 +4,7 @@
 
 inherit gnome2 eutils
 
-DESCRIPTION="An implementation of the classic hearts card game for the GNOME desktop"
+DESCRIPTION="gdiff-ext is context menu extension for Nautilus to use diff tools."
 HOMEPAGE="http://diff-ext.sourceforge.net"
 SRC_URI="mirror://sourceforge/diff-ext/${P}.tar.bz2"
 

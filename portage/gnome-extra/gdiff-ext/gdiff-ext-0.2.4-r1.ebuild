@@ -29,6 +29,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/clean-stray-chars.patch
 	epatch "${FILESDIR}"/fix-nautilus-freeze.patch
 	epatch "${FILESDIR}"/gnome-2.22-fix.patch #patch by Arun Raghavan <arunisgod@gmail.com>
+	intltoolize --automake --copy --force || die "intltoolize failed"
 	eautoreconf
-	intltoolize --copy --force
 }

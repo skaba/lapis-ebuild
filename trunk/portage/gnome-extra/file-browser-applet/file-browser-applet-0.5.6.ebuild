@@ -4,7 +4,7 @@
 
 inherit gnome2 cmake-utils
 
-DESCRIPTION="Browse and open files in your home directory from the Gnome panel."
+DESCRIPTION="Browse and open files in your home directory from the GNOME panel."
 HOMEPAGE="http://code.google.com/p/gnome-menu-file-browser-applet/"
 SRC_URI="http://gnome-menu-file-browser-applet.googlecode.com/files/${P}.tar.gz"
 
@@ -20,8 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.12
 	>=gnome-base/gnome-desktop-2.0"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	>=dev-util/cmake-2.4"
+	dev-util/pkgconfig"
 
 src_compile() {
 	mycmakeargs="${mycmakeargs} -DCMAKE_INSTALL_GCONF_SCHEMA_DIR=/etc/gconf/schemas"

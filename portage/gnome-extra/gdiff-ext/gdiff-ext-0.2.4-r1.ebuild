@@ -19,7 +19,8 @@ RDEPEND=">=x11-libs/gtk+-2.0
 	>=gnome-base/gnome-vfs-2.14"
 
 DEPEND="${RDEPEND}
-	dev-util/intltool"
+	dev-util/intltool
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog"
 

@@ -8,28 +8,30 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Internet kota kontrol programı"
 HOMEPAGE="http://jkota.googlecode.com/"
 SRC_URI="http://jkota.googlecode.com/files/${P}-src.zip"
-#SRC_URI="http://ebuild.linux-sevenler.org/distfiles/${P}-src.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-RESTRICT="test"
-S="${WORKDIR}"
+S="${WORKDIR}/${P}-src"
+
+COMMON_DEPEND="dev-java/blowfishj
+	dev-java/jtidy
+	>=dev-java/httpunit-1.6.2-r2
+	dev-java/jcommon:1.0
+	dev-java/jfreechart:1.0"
 
 RDEPEND=">=virtual/jre-1.6
-	dev-java/blowfishj
-	dev-java/jtidy
-	>=dev-java/httpunit-1.6.2-r2"
+	${COMMON_DEPEND}"
 
 DEPEND=">=virtual/jdk-1.6
-	dev-java/blowfishj
-	dev-java/jtidy
-	dev-java/httpunit"
+	${COMMON_DEPEND}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	rm lib/*.jar || die
-	java-pkg_jarfrom --into lib blowfishj,jtidy,httpunit
+	java-pkg_jarfrom --into lib blowfishj,jtidy,httpunit,jcommon-1.0
+	java-pkg_jarfrom --into lib jfreechart-1.0 jfreechart.jar
 }
 
 src_install() {

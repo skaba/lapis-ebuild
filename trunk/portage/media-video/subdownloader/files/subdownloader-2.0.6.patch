@@ -1,0 +1,386 @@
+diff -Nur subdownloader-2.0.6/cli/main.py subdownloader-2.0.6_patched/cli/main.py
+--- subdownloader-2.0.6/cli/main.py	2008-08-12 15:32:23.000000000 +0300
++++ subdownloader-2.0.6_patched/cli/main.py	2008-09-29 20:34:53.000000000 +0300
+@@ -19,12 +19,12 @@
+ import logging, os.path
+ import base64, zlib
+ import thread
+-from modules import OSDBServer
+-from modules.SDDBServer import SDDBServer
+-from FileManagement import FileScan, Subtitle
+-from modules import filter, progressbar
+-import modules.configuration as conf
+-import languages.Languages as Languages
++from subdownloader.modules import OSDBServer
++from subdownloader.modules.SDDBServer import SDDBServer
++from subdownloader.FileManagement import FileScan, Subtitle
++from subdownloader.modules import filter, progressbar
++import subdownloader.modules.configuration as conf
++import subdownloader.languages.Languages as Languages
+ 
+ class Main(OSDBServer.OSDBServer):
+     
+diff -Nur subdownloader-2.0.6/FileManagement/FileScan.py subdownloader-2.0.6_patched/FileManagement/FileScan.py
+--- subdownloader-2.0.6/FileManagement/FileScan.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/FileManagement/FileScan.py	2008-09-29 20:35:12.000000000 +0300
+@@ -20,11 +20,11 @@
+ import os.path
+ import re #To extract the imdb regexp from the NFO files
+ import logging
+-from FileManagement import get_extension
++from subdownloader.FileManagement import get_extension
+ import RecursiveParser
+-import modules.videofile as videofile
+-import modules.subtitlefile as subtitlefile
+-import modules.metadata as metadata
++import subdownloader.modules.videofile as videofile
++import subdownloader.modules.subtitlefile as subtitlefile
++import subdownloader.modules.metadata as metadata
+ 
+ log = logging.getLogger("subdownloader.FileManagement.FileScan")
+ 
+diff -Nur subdownloader-2.0.6/FileManagement/Subtitle.py subdownloader-2.0.6_patched/FileManagement/Subtitle.py
+--- subdownloader-2.0.6/FileManagement/Subtitle.py	2008-08-12 15:32:23.000000000 +0300
++++ subdownloader-2.0.6_patched/FileManagement/Subtitle.py	2008-09-29 20:35:45.000000000 +0300
+@@ -17,10 +17,10 @@
+ ##    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ 
+ import re, sys, os, logging
+-import modules.videofile as videofile
+-import modules.subtitlefile as subtitlefile
+-from FileManagement import FileScan,get_extension, clear_string, without_extension
+-from languages import Languages, autodetect_lang
++import subdownloader.modules.videofile as videofile
++import subdownloader.modules.subtitlefile as subtitlefile
++from subdownloader.FileManagement import FileScan,get_extension, clear_string, without_extension
++from subdownloader.languages import Languages, autodetect_lang
+ 
+ log = logging.getLogger("subdownloader.FileManagement.Subtitle")
+ 
+diff -Nur subdownloader-2.0.6/FileManagement/VideoTools.py subdownloader-2.0.6_patched/FileManagement/VideoTools.py
+--- subdownloader-2.0.6/FileManagement/VideoTools.py	2008-07-28 14:29:18.000000000 +0300
++++ subdownloader-2.0.6_patched/FileManagement/VideoTools.py	2008-09-29 20:36:00.000000000 +0300
+@@ -17,10 +17,10 @@
+ ##    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ 
+ import re, os, logging
+-import modules.videofile as videofile
+-import modules.subtitlefile as subtitlefile
+-from FileManagement import get_extension, clear_string, without_extension
+-from languages import Languages, autodetect_lang
++import subdownloader.modules.videofile as videofile
++import subdownloader.modules.subtitlefile as subtitlefile
++from subdownloader.FileManagement import get_extension, clear_string, without_extension
++from subdownloader.languages import Languages, autodetect_lang
+ 
+ log = logging.getLogger("subdownloader.FileManagement.Video")
+ 
+diff -Nur subdownloader-2.0.6/gui/about.py subdownloader-2.0.6_patched/gui/about.py
+--- subdownloader-2.0.6/gui/about.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/about.py	2008-09-29 20:36:20.000000000 +0300
+@@ -7,7 +7,7 @@
+                         QMessageBox, QFileDialog, QIcon, QDialog, QInputDialog,QDirModel, QItemSelectionModel
+ from PyQt4.Qt import qDebug, qFatal, qWarning, qCritical
+ 
+-from gui.about_ui import Ui_AboutDialog
++from subdownloader.gui.about_ui import Ui_AboutDialog
+ import logging
+ log = logging.getLogger("subdownloader.gui.about")
+ 
+diff -Nur subdownloader-2.0.6/gui/imdbSearch.py subdownloader-2.0.6_patched/gui/imdbSearch.py
+--- subdownloader-2.0.6/gui/imdbSearch.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/imdbSearch.py	2008-09-29 20:36:57.000000000 +0300
+@@ -7,8 +7,8 @@
+                         QMessageBox, QFileDialog, QIcon, QDialog, QInputDialog,QDirModel, QItemSelectionModel
+ from PyQt4.Qt import qDebug, qFatal, qWarning, qCritical
+ 
+-from gui.imdb_ui import Ui_IMDBSearchDialog
+-from gui.imdblistview import ImdbListModel, ImdbListView
++from subdownloader.gui.imdb_ui import Ui_IMDBSearchDialog
++from subdownloader.gui.imdblistview import ImdbListModel, ImdbListView
+ import webbrowser
+ 
+ class imdbSearchDialog(QtGui.QDialog): 
+diff -Nur subdownloader-2.0.6/gui/__init__.py subdownloader-2.0.6_patched/gui/__init__.py
+--- subdownloader-2.0.6/gui/__init__.py	2008-07-28 14:29:18.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/__init__.py	2008-09-29 22:44:56.000000000 +0300
+@@ -20,7 +20,7 @@
+ __author__    = "Ivan Garcia <contact@ivangarcia.org>"
+ 
+ import sys, os, re, StringIO, traceback
+-from modules import APP_TITLE, APP_VERSION, OSDBServer, subtitlefile, videofile
++from subdownloader.modules import APP_TITLE, APP_VERSION, OSDBServer, subtitlefile, videofile
+                                 
+ 
+ error_dialog = None
+diff -Nur subdownloader-2.0.6/gui/login.py subdownloader-2.0.6_patched/gui/login.py
+--- subdownloader-2.0.6/gui/login.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/login.py	2008-09-29 20:37:24.000000000 +0300
+@@ -7,7 +7,7 @@
+                         QMessageBox, QFileDialog, QIcon, QDialog, QInputDialog,QDirModel, QItemSelectionModel
+ from PyQt4.Qt import qDebug, qFatal, qWarning, qCritical
+ 
+-from gui.login_ui import Ui_LoginDialog
++from subdownloader.gui.login_ui import Ui_LoginDialog
+ import webbrowser
+ import time, thread
+ import logging
+diff -Nur subdownloader-2.0.6/gui/main.py subdownloader-2.0.6_patched/gui/main.py
+--- subdownloader-2.0.6/gui/main.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/main.py	2008-09-29 20:38:54.000000000 +0300
+@@ -35,33 +35,33 @@
+                         QMessageBox, QFileDialog, QIcon, QDialog, QInputDialog,QDirModel, QItemSelectionModel
+ from PyQt4.Qt import qDebug, qFatal, qWarning, qCritical, QApplication, QMainWindow
+ 
+-from gui.SplashScreen import SplashScreen, NoneSplashScreen
+-from FileManagement import get_extension, clear_string, without_extension
++from subdownloader.gui.SplashScreen import SplashScreen, NoneSplashScreen
++from subdownloader.FileManagement import get_extension, clear_string, without_extension
+ 
+ # create splash screen and show messages to the user
+ app = QApplication(sys.argv)
+ splash = SplashScreen()
+ splash.showMessage(QApplication.translate("subdownloader", "Loading modules..."))
+ QCoreApplication.flush()
+-from modules import * 
+-from modules.OSDBServer import OSDBServer, TimeoutFunctionException
+-from modules.SDDBServer import SDDBServer
+-from gui import installErrorHandler, Error, _Warning, extension
+-
+-from gui.uploadlistview import UploadListModel, UploadListView
+-from gui.videotreeview import VideoTreeModel
+-
+-from gui.main_ui import Ui_MainWindow
+-from gui.imdbSearch import imdbSearchDialog
+-from gui.preferences import preferencesDialog
+-from gui.about import aboutDialog
+-from gui.login import loginDialog
+-from FileManagement import FileScan, Subtitle
+-from modules.videofile import  *
+-from modules.subtitlefile import *
+-from modules.search import *
++from subdownloader.modules import * 
++from subdownloader.modules.OSDBServer import OSDBServer, TimeoutFunctionException
++from subdownloader.modules.SDDBServer import SDDBServer
++from subdownloader.gui import installErrorHandler, Error, _Warning, extension
++
++from subdownloader.gui.uploadlistview import UploadListModel, UploadListView
++from subdownloader.gui.videotreeview import VideoTreeModel
++
++from subdownloader.gui.main_ui import Ui_MainWindow
++from subdownloader.gui.imdbSearch import imdbSearchDialog
++from subdownloader.gui.preferences import preferencesDialog
++from subdownloader.gui.about import aboutDialog
++from subdownloader.gui.login import loginDialog
++from subdownloader.FileManagement import FileScan, Subtitle
++from subdownloader.modules.videofile import  *
++from subdownloader.modules.subtitlefile import *
++from subdownloader.modules.search import *
+ 
+-import languages.Languages as languages
++import subdownloader.languages.Languages as languages
+ 
+ import logging
+ log = logging.getLogger("subdownloader.gui.main")
+diff -Nur subdownloader-2.0.6/gui/preferences.py subdownloader-2.0.6_patched/gui/preferences.py
+--- subdownloader-2.0.6/gui/preferences.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/preferences.py	2008-09-29 20:39:10.000000000 +0300
+@@ -7,9 +7,9 @@
+                         QMessageBox, QFileDialog, QIcon, QDialog, QInputDialog,QDirModel, QItemSelectionModel
+ from PyQt4.Qt import qDebug, qFatal, qWarning, qCritical
+ 
+-from gui.preferences_ui import Ui_PreferencesDialog
++from subdownloader.gui.preferences_ui import Ui_PreferencesDialog
+ import webbrowser
+-import languages.Languages as languages
++import subdownloader.languages.Languages as languages
+ import time, thread, platform
+ import logging
+ log = logging.getLogger("subdownloader.gui.preferences")
+diff -Nur subdownloader-2.0.6/gui/uploadlistview.py subdownloader-2.0.6_patched/gui/uploadlistview.py
+--- subdownloader-2.0.6/gui/uploadlistview.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/uploadlistview.py	2008-09-29 20:39:48.000000000 +0300
+@@ -12,13 +12,13 @@
+                      
+ from PyQt4.QtGui import QItemSelection
+ 
+-from FileManagement import get_extension, clear_string, without_extension
+-import FileManagement.VideoTools as VideoTools
+-import FileManagement.Subtitle as Subtitle
+-import languages.Languages as languages
++from subdownloader.FileManagement import get_extension, clear_string, without_extension
++import subdownloader.FileManagement.VideoTools as VideoTools
++import subdownloader.FileManagement.Subtitle as Subtitle
++import subdownloader.languages.Languages as languages
+ 
+-from modules.videofile import  *
+-from modules.subtitlefile import *
++from subdownloader.modules.videofile import  *
++from subdownloader.modules.subtitlefile import *
+ 
+ import logging
+ log = logging.getLogger("subdownloader.gui.uploadlistview")
+diff -Nur subdownloader-2.0.6/gui/videotreeview.py subdownloader-2.0.6_patched/gui/videotreeview.py
+--- subdownloader-2.0.6/gui/videotreeview.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/gui/videotreeview.py	2008-09-29 20:40:10.000000000 +0300
+@@ -11,11 +11,11 @@
+                      QByteArray, QBuffer, QMimeData, \
+                      QDrag, QRect      
+ 
+-from modules.videofile import  VideoFile
+-from modules.subtitlefile import SubtitleFile
+-from modules.search import Movie
++from subdownloader.modules.videofile import  VideoFile
++from subdownloader.modules.subtitlefile import SubtitleFile
++from subdownloader.modules.search import Movie
+ 
+-import languages.Languages as languages
++import subdownloader.languages.Languages as languages
+ 
+ import images_rc
+ import logging
+diff -Nur subdownloader-2.0.6/languages/Languages.py subdownloader-2.0.6_patched/languages/Languages.py
+--- subdownloader-2.0.6/languages/Languages.py	2008-08-12 15:32:24.000000000 +0300
++++ subdownloader-2.0.6_patched/languages/Languages.py	2008-09-29 20:40:35.000000000 +0300
+@@ -17,7 +17,7 @@
+ ##    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ 
+ 
+-import languages.autodetect_lang as autodetect_lang
++import subdownloader.languages.autodetect_lang as autodetect_lang
+ import re
+ import os.path
+ import logging
+diff -Nur subdownloader-2.0.6/modules/configuration.py subdownloader-2.0.6_patched/modules/configuration.py
+--- subdownloader-2.0.6/modules/configuration.py	2008-07-29 15:33:43.000000000 +0300
++++ subdownloader-2.0.6_patched/modules/configuration.py	2008-09-29 20:40:55.000000000 +0300
+@@ -20,7 +20,7 @@
+ import logging
+ import os.path
+ import user
+-from modules import progressbar
++from subdownloader.modules import progressbar
+ 
+ """
+ Logging levels:
+diff -Nur subdownloader-2.0.6/modules/filter.py subdownloader-2.0.6_patched/modules/filter.py
+--- subdownloader-2.0.6/modules/filter.py	2008-07-28 14:29:19.000000000 +0300
++++ subdownloader-2.0.6_patched/modules/filter.py	2008-09-29 20:41:06.000000000 +0300
+@@ -18,7 +18,7 @@
+ 
+ import logging
+ import os.path
+-from FileManagement import Subtitle
++from subdownloader.FileManagement import Subtitle
+ 
+ class Filter(object):
+     """Filter object to returned filtered information on given videos
+diff -Nur subdownloader-2.0.6/modules/OSDBServer.py subdownloader-2.0.6_patched/modules/OSDBServer.py
+--- subdownloader-2.0.6/modules/OSDBServer.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/modules/OSDBServer.py	2008-09-29 20:41:57.000000000 +0300
+@@ -23,11 +23,11 @@
+ import threading, thread
+ log = logging.getLogger("subdownloader.OSDBServer")
+     
+-from modules import APP_TITLE, APP_VERSION
+-import modules.videofile as videofile
+-import modules.subtitlefile as subtitlefile
+-from FileManagement import Subtitle
+-from modules.SDDBServer import SDDBServer
++from subdownloader.modules import APP_TITLE, APP_VERSION
++import subdownloader.modules.videofile as videofile
++import subdownloader.modules.subtitlefile as subtitlefile
++from subdownloader.FileManagement import Subtitle
++from subdownloader.modules.SDDBServer import SDDBServer
+ 
+ #SERVER_ADDRESS = "http://dev.opensubtitles.org/xml-rpc"
+ DEFAULT_SERVER = "http://www.opensubtitles.org/xml-rpc"
+diff -Nur subdownloader-2.0.6/modules/SDDBServer.py subdownloader-2.0.6_patched/modules/SDDBServer.py
+--- subdownloader-2.0.6/modules/SDDBServer.py	2008-07-28 14:29:19.000000000 +0300
++++ subdownloader-2.0.6_patched/modules/SDDBServer.py	2008-09-29 20:42:16.000000000 +0300
+@@ -1,6 +1,6 @@
+ import base64, urllib2
+ import platform
+-from modules import APP_TITLE, APP_VERSION
++from subdownloader.modules import APP_TITLE, APP_VERSION
+ 
+ class SDDBServer(object):
+     def sendLogin(self, username):
+diff -Nur subdownloader-2.0.6/modules/search.py subdownloader-2.0.6_patched/modules/search.py
+--- subdownloader-2.0.6/modules/search.py	2008-07-28 14:29:19.000000000 +0300
++++ subdownloader-2.0.6_patched/modules/search.py	2008-09-29 22:39:14.000000000 +0300
+@@ -20,11 +20,11 @@
+ from xml.dom import minidom
+ import xml.parsers.expat
+ try:
+-    from modules import subtitlefile
++    from subdownloader.modules import subtitlefile
+ except ImportError:
+     import sys, os
+     sys.path.append(os.path.dirname(os.path.dirname(os.getcwd())))
+-    from modules import subtitlefile
++    from subdownloader.modules import subtitlefile
+     
+ 
+ class Movie(object):
+diff -Nur subdownloader-2.0.6/modules/subtitlefile.py subdownloader-2.0.6_patched/modules/subtitlefile.py
+--- subdownloader-2.0.6/modules/subtitlefile.py	2008-07-28 14:29:19.000000000 +0300
++++ subdownloader-2.0.6_patched/modules/subtitlefile.py	2008-09-29 22:46:55.000000000 +0300
+@@ -19,7 +19,7 @@
+ 
+ import os
+ import md5
+-import languages.Languages as languages
++import subdownloader.languages.Languages as languages
+ 
+ SUBTITLES_EXT = ["srt","sub","txt","ssa", "smi", "ass", "mpl"]
+ SELECT_SUBTITLES = "Subtitle Files (*.%s)"% " *.".join(SUBTITLES_EXT)
+diff -Nur subdownloader-2.0.6/run.py subdownloader-2.0.6_patched/run.py
+--- subdownloader-2.0.6/run.py	2008-08-28 15:51:09.000000000 +0300
++++ subdownloader-2.0.6_patched/run.py	2008-09-29 22:47:54.000000000 +0300
+@@ -26,7 +26,7 @@
+ #print sys.path[0]
+ sys.path.append(os.path.join(sys.path[0], 'modules') )
+ # simple aplication starter
+-import modules.configuration as conf
++import subdownloader.modules.configuration as conf
+ 
+ """
+ CRITICAL    50
+@@ -42,9 +42,9 @@
+ (options, args) = parser.parse_args()
+ 
+ if options.mode == 'gui':
+-    import gui.main
++    import subdownloader.gui.main
+ elif options.mode == 'cli':
+-    import cli.main
++    import subdownloader.cli.main
+ 
+ logging.basicConfig(level=options.logging,
+                     format=conf.Logging.log_format,
+@@ -76,9 +76,9 @@
+     log.info('Subdownloader started')
+     
+     if options.mode == 'gui':
+-        gui.main.main(options)
++        subdownloader.gui.main.main(options)
+     elif options.mode == 'cli':
+-        cli = cli.main.Main(options)
+-        cli.start_session()
++        cli = subdownloader.cli.main.Main(options)
++        subdownloader.cli.start_session()
+     
+     log.info('Subdownloader closed for mantainance.')
+diff -Nur subdownloader-2.0.6/subdownloader.desktop subdownloader-2.0.6_patched/subdownloader.desktop
+--- subdownloader-2.0.6/subdownloader.desktop	2008-07-29 15:39:04.000000000 +0300
++++ subdownloader-2.0.6_patched/subdownloader.desktop	2008-09-29 22:21:13.000000000 +0300
+@@ -6,7 +6,7 @@
+ Exec=subdownloader
+ GenericName=
+ GenericName[en_US]=
+-Icon=/usr/share/subdownloader/gui/images/subdownloader.png
++Icon=subdownloader
+ MimeType=video/avi;
+ Name=SubDownloader
+ Name[en_US]=SubDownloader

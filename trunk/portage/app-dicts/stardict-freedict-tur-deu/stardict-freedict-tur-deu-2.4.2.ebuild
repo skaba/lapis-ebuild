@@ -8,8 +8,8 @@ DICT_PREFIX="dictd_www.freedict.de_"
 
 inherit stardict
 
-HOMEPAGE="http://www.stardict.org/downloadit.php"
-KEYWORDS="x86 ~amd64 ppc sparc"
+HOMEPAGE="http://stardict.sourceforge.net/Dictionaries_dictd-www.freedict.de.php"
+KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND=">=app-dicts/stardict-2.4.2"

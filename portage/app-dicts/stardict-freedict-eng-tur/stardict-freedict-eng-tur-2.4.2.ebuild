@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-FROM_LANG="Turkish"
-TO_LANG="English"
+FROM_LANG="English"
+TO_LANG="Turkish"
 DICT_PREFIX="freedict-"
 
 inherit stardict

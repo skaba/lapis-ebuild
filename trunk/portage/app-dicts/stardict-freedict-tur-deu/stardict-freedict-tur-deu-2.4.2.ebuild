@@ -4,11 +4,11 @@
 
 FROM_LANG="Turkish"
 TO_LANG="German"
-DICT_PREFIX="dictd_www.freedict.de_"
+DICT_PREFIX="freedict-"
 
 inherit stardict
 
-HOMEPAGE="http://stardict.sourceforge.net/Dictionaries_dictd-www.freedict.de.php"
+HOMEPAGE="http://stardict.sourceforge.net/"
 KEYWORDS="~amd64"
 IUSE=""
 

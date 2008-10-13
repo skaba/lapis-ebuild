@@ -15,7 +15,6 @@ KEYWORDS="~amd64 ~x86"
 S="${WORKDIR}/${P}-src"
 
 COMMON_DEPEND="dev-java/blowfishj
-	dev-java/jtidy
 	>=dev-java/httpunit-1.6.2-r2
 	dev-java/jcommon:1.0
 	dev-java/jfreechart:1.0"
@@ -30,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	rm lib/*.jar || die
-	java-pkg_jarfrom --into lib blowfishj,jtidy,httpunit,jcommon-1.0
+	java-pkg_jarfrom --into lib blowfishj,httpunit,jcommon-1.0
 	java-pkg_jarfrom --into lib jfreechart-1.0 jfreechart.jar
 }
 

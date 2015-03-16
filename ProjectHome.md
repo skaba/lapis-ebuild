@@ -1,0 +1,1 @@
+The Lapis ebuild team provides ebuilds for packages that are not in Gentoo bugzilla or in the offical portage tree. We follow suggestions from Lapis (http://www.linux-sevenler.org) users.
